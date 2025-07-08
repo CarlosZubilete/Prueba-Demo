@@ -12,7 +12,7 @@ namespace Data
   public class DataAccess
   {
 
-    private String connectionString = ConfigurationManager.ConnectionStrings["MiConexionSQL"].ConnectionString;
+    //private String connectionString = ConfigurationManager.ConnectionStrings["MiConexionSQL"].ConnectionString;
     public DataAccess() { }
     public DataTable GetDataTable(String nameTable, String querySql)
     {
@@ -54,7 +54,7 @@ namespace Data
     {
       try
       {
-        // string connectionString = ConfigurationManager.ConnectionStrings["MiConexionSQL"].ConnectionString;
+        string connectionString = ConfigurationManager.ConnectionStrings["MiConexionSQL"].ConnectionString;
         SqlConnection connection = new SqlConnection(connectionString);
         connection.Open();
         return connection;
